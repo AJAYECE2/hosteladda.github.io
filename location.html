@@ -1,0 +1,38 @@
+
+
+        /* Style for the location search navbar */
+        #location-navbar {
+            background-color: #f2f2f2;
+            padding: 10px;
+        }
+
+        #location-input {
+            width: 70%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        #search-button {
+            width: 20%;
+            padding: 8px;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+ 
+<!-- Small Navbar for Location Auto-Search -->
+<div id="location-navbar">
+    <input type="text" id="location-input" placeholder="Enter location">
+    <button id="search-button" onclick="searchLocation()">Search</button>
+</div>
+
+<!-- Include Google Maps API script -->
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
+
+<!-- Your JavaScript code for location auto-search goes here -->
+<script>
+    function searchLocation() {
+        var input = document.getElementById('location-input');
+        var autocomplete = new google.maps.places.Autocomplete(input);
+    }
+</script>
+
